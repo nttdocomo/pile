@@ -1,0 +1,24 @@
+{
+  "name": "@pile/button",
+  "version": "1.0.0",
+  "description": "",
+  "module": "src/index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "renmaomin <renmaomin@126.com> (https://github.com/renmm)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "rollup": "^0.68.0"
+  }
+}

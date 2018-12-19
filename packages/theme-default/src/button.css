@@ -1,0 +1,21 @@
+@import 'theme';
+
+@ns pile {
+  @c button {
+    color: var(--color-black);
+    @d primary {
+      color: var(--button-primary-color);
+      border-color:  var(--button-primary-border);
+      background-color: var(--button-primary-fill);
+    }
+    @m des {
+      color: gray;
+    }
+    @when state {
+      color: green;
+    }
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+}

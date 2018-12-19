@@ -1,0 +1,34 @@
+{
+  "name": "@pile/theme-default",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.css",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "renmaomin <renmaomin@126.com> (https://github.com/renmm)",
+  "license": "MIT",
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9",
+    "iOS 7"
+  ],
+  "devDependencies": {
+    "cssnano": "^4.1.7",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "postcss": "^7.0.6",
+    "postcss-import": "^12.0.1",
+    "postcss-normalize": "^7.0.1",
+    "postcss-preset-env": "^6.4.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@csstools/normalize.css": "^9.0.1"
+  }
+}

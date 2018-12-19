@@ -1,0 +1,82 @@
+:root {
+  /* colors */
+  --color-white: #fff;
+  --color-black: #333;
+  --color-dashed: #d9d9d9;
+  --color-transparent: rgba(0,0,0,0);
+
+  --color-primary: #337ab7;
+  --color-success: #218838;
+  --color-info: #31b0d5;
+  --color-warning: #ec971f;
+  --color-danger: #c9302c;
+
+  /* icons*/
+  --icon-arrow-left: '\e900';
+  --icon-arrow-right: '\e901';
+  --icon-check-circle: '\e902';
+  --icon-check-solid-circle: '\e903';
+  --icon-check: '\e904';
+  --icon-coin-rmb: '\e905';
+  --icon-delete: '\e906';
+  --icon-download: '\e907';
+  --icon-editor: '\e908';
+  --icon-error-circle: '\e909';
+  --icon-error-solid-circle: '\e90a';
+  --icon-error: '\e90b';
+  --icon-information: '\e90c';
+  --icon-loading-snaker: '\e90d';
+  --icon-loading: '\e90e';
+  --icon-location: '\e90f';
+  --icon-lock: '\e910';
+  --icon-message: '\e911';
+  --icon-minus-square: '\e912';
+  --icon-minus: '\e913';
+  --icon-phone: '\e914';
+  --icon-plus-square: '\e915';
+  --icon-plus: '\e916';
+  --icon-print: '\e917';
+  --icon-search: '\e918';
+  --icon-star: '\e919';
+  --icon-time: '\e91a';
+  --icon-user: '\e91b';
+  --icon-warnning-solid-circle: '\e91c';
+  --icon-warnning: '\e91d';
+
+  /* button */
+  --button-primary-color: var(--color-white);
+  --button-primary-border: var(--color-primary);
+  --button-primary-fill: var(--color-primary);
+
+}
+
+.pile-button {
+    color: #333;
+    color: var(--color-black);
+
+}
+
+.pile-button:hover {
+      color: #333;
+      color: var(--color-black);
+    }
+
+.pile-button.is-state {
+      color: green;
+
+}
+
+.pile-button-primary {
+      color: #fff;
+      color: var(--button-primary-color);
+      border-color:  #337ab7;
+      border-color:  var(--button-primary-border);
+      background-color: #337ab7;
+      background-color: var(--button-primary-fill);
+
+}
+
+.pile-button--des {
+      color: gray;
+
+}
