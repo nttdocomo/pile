@@ -1,7 +1,5 @@
 import * as React from 'react';
-
-
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 const Button = ({ children, type }) => {
   const cls = `pile-button-${type}`;

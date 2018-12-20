@@ -20,7 +20,16 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [
+          path.resolve(__dirname, '../src'),
+          path.resolve(__dirname, '../../src'),
+          path.resolve(__dirname, '../../packages'),
+        ],
+        exclude: /node_modules/,
+      },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [

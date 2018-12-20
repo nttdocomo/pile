@@ -3,19 +3,20 @@ import {
 } from 'recompose';
 import * as React from 'react';
 import { render } from 'react-dom';
+import * as PropTypes from 'prop-types';
 import marked from 'marked';
 import Canvas from './canvas';
 import trace from '../utils/trace';
 
-import './amblin.css'
+import './amblin.css';
 
 marked.setOptions({
-    gfm: true,
-    tables: true,
-    breaks: true,
-    pedantic: false,
-    smartLists: true,
-    smartypants: true
+  gfm: true,
+  tables: true,
+  breaks: true,
+  pedantic: false,
+  smartLists: true,
+  smartypants: true,
 });
 
 const enhance = compose(
@@ -60,10 +61,16 @@ const Markdown = ({ html }) => (
   <div
     id="wrapper"
     className="pure-markdown"
+    /* eslint-disable react/no-danger */
     dangerouslySetInnerHTML={{
       __html: html,
     }}
+    /* eslint-enable react/no-danger */
   />
 );
+
+Markdown.propTypes = {
+  html: PropTypes.string.isRequired,
+};
 
 export default enhance(Markdown);
