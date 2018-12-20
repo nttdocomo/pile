@@ -7,6 +7,17 @@ import marked from 'marked';
 import Canvas from './canvas';
 import trace from '../utils/trace';
 
+import './amblin.css'
+
+marked.setOptions({
+    gfm: true,
+    tables: true,
+    breaks: true,
+    pedantic: false,
+    smartLists: true,
+    smartypants: true
+});
+
 const enhance = compose(
   withProps(({ input }) => {
     const snippets = {};
@@ -47,6 +58,7 @@ const enhance = compose(
 
 const Markdown = ({ html }) => (
   <div
+    id="wrapper"
     className="pure-markdown"
     dangerouslySetInnerHTML={{
       __html: html,

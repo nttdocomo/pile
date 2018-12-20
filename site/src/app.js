@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Routes from './roots/routes';
 
 import '../../packages/theme-default/lib/index.css';
+import './app.css';
 
 const App = () => (
   <div className="app">
@@ -18,7 +19,7 @@ const App = () => (
         <Routes />
       </div>
     </div>
-    <div className="footer"><p>uxdc</p></div>
+    <div className="footer"><p>Copyright © 2017-2018 滴滴企业版设计体验技术部联合出品</p></div>
   </div>
 );
 
