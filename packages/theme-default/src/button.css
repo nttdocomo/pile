@@ -2,20 +2,22 @@
 
 @ns pile {
   @c button {
-    color: var(--color-black);
-    @d primary {
+    font-size: var(--button-size-normal);
+    @m primary {
       color: var(--button-primary-color);
       border-color:  var(--button-primary-border);
       background-color: var(--button-primary-fill);
     }
-    @m des {
-      color: gray;
+    @m success {
+      color: var(--button-success-color);
+      border-color:  var(--button-success-border);
+      background-color: var(--button-success-fill);
     }
-    @when state {
-      color: green;
+    @when small {
+      font-size: var(--button-size-small);
     }
-    &:hover {
-      color: var(--color-black);
+    @when large {
+      font-size: var(--button-size-large);
     }
   }
 }

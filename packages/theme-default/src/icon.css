@@ -24,6 +24,15 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: var(--icon-size-normal);
+
+  &.small {
+    font-size: var(--icon-size-small);
+  }
+  &.large {
+    font-size: var(--icon-size-large);
+  }
 }
 
 .pile-icon-arrow-left {

@@ -391,6 +391,11 @@ template {
 }
 
 :root {
+  /* sizes */
+  --size-small: 12px;
+  --size-normal: 16px;
+  --size-large: 24px;
+
   /* colors */
   --color-white: #fff;
   --color-black: #333;
@@ -435,10 +440,20 @@ template {
   --icon-warnning-solid-circle: '\e91c';
   --icon-warnning: '\e91d';
 
+  --icon-size-normal: var(--size-normal);
+  --icon-size-small: var(--size-small);
+  --icon-size-large: var(--size-large);
+
   /* button */
   --button-primary-color: var(--color-white);
   --button-primary-border: var(--color-primary);
   --button-primary-fill: var(--color-primary);
+  --button-success-color: var(--color-white);
+  --button-success-border: var(--color-success);
+  --button-success-fill: var(--color-success);
+  --button-size-normal: var(--size-normal);
+  --button-size-small: var(--size-small);
+  --button-size-large: var(--size-large);
 
 }
 
@@ -468,7 +483,21 @@ template {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: 16px;
+
+  font-size: var(--icon-size-normal)
 }
+
+[class^="pile-icon-"].small, [class*=" pile-icon-"].small {
+    font-size: 12px;
+    font-size: var(--icon-size-small);
+  }
+
+[class^="pile-icon-"].large, [class*=" pile-icon-"].large {
+    font-size: 24px;
+    font-size: var(--icon-size-large);
+  }
 
 .pile-icon-arrow-left:before {
     content: '\e900';
@@ -623,20 +652,21 @@ template {
   }
 
 .pile-button {
-    color: #333;
-    color: var(--color-black);
+    font-size: 16px;
+    font-size: var(--button-size-normal);
 }
 
-.pile-button:hover {
-      color: #333;
-      color: var(--color-black);
-    }
-
-.pile-button.is-state {
-      color: green;
+.pile-button.is-large {
+      font-size: 24px;
+      font-size: var(--button-size-large);
 }
 
-.pile-button-primary {
+.pile-button.is-small {
+      font-size: 12px;
+      font-size: var(--button-size-small);
+}
+
+.pile-button--primary {
       color: #fff;
       color: var(--button-primary-color);
       border-color:  #337ab7;
@@ -645,6 +675,11 @@ template {
       background-color: var(--button-primary-fill);
 }
 
-.pile-button--des {
-      color: gray;
+.pile-button--success {
+      color: #fff;
+      color: var(--button-success-color);
+      border-color:  #218838;
+      border-color:  var(--button-success-border);
+      background-color: #218838;
+      background-color: var(--button-success-fill);
 }

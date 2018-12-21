@@ -1,6 +1,6 @@
 # mobile端按钮控件
 
-### 基本用法
+## 基本用法
 
 ```js
 render () {
@@ -17,7 +17,23 @@ render () {
 }
 ```
 
-### 反转
+## size
+
+```js
+render () {
+  return (
+    <div>
+      <Button type='primary' size='small'>Primary</Button>{' '}
+      <Button type='primary'>Primary</Button>{' '}
+      <Button type='primary' size='large'>Primary</Button>{' '}
+    </div>
+  )
+}
+```
+
+
+
+## 反转
 
 > 背景color和字体color互换
 

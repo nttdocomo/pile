@@ -15,6 +15,15 @@ module.exports = function (api) {
       useBuiltIns: 'entry',
       debug: true,
     }], '@babel/preset-react'],
-    plugins: ['@babel/plugin-syntax-dynamic-import', '@babel/plugin-transform-runtime'],
+    plugins: [
+      '@babel/plugin-syntax-dynamic-import',
+      '@babel/plugin-transform-runtime',
+      // ['prismjs', {
+      //   languages: ['javascript', 'css', 'markup'],
+      //   plugins: ['line-numbers'],
+      //   theme: 'twilight',
+      //   css: true,
+      // }],
+    ],
   };
 };

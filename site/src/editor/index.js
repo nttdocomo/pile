@@ -63,7 +63,7 @@ export default class Editor extends Component {
     };
 
     return (
-      <div className="editor">
+      <div className="pure-editor">
         <div style={style} ref={ref => (this.editor = ref)} />
         <span onClick={this.onToggle.bind(this, show)}>{show ? '隐藏代码' : '显示代码'}</span>
       </div>

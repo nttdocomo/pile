@@ -96,7 +96,7 @@ body {
     margin-bottom: 1.5rem; }
   #wrapper h6 {
     font-size: 1rem; }
-  #wrapper p {
+  #wrapper p, #wrapper .pure-canvas {
     margin: 0 0 1.5em; }
   #wrapper ul, #wrapper ol {
     color: #444;

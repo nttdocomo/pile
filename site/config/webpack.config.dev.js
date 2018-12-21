@@ -7,6 +7,10 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
+    historyApiFallback: true,
+    useLocalIp: true,
+    port: 9999,
+    host: '0.0.0.0',
   },
   module: {
     rules: [
@@ -24,6 +28,7 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
+        PUBLIC_URL: JSON.stringify('/'),
       },
     }),
   ],

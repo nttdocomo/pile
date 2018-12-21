@@ -1,4 +1,9 @@
 :root {
+  /* sizes */
+  --size-small: 12px;
+  --size-normal: 16px;
+  --size-large: 24px;
+
   /* colors */
   --color-white: #fff;
   --color-black: #333;
@@ -43,10 +48,20 @@
   --icon-warnning-solid-circle: '\e91c';
   --icon-warnning: '\e91d';
 
+  --icon-size-normal: var(--size-normal);
+  --icon-size-small: var(--size-small);
+  --icon-size-large: var(--size-large);
+
   /* button */
   --button-primary-color: var(--color-white);
   --button-primary-border: var(--color-primary);
   --button-primary-fill: var(--color-primary);
+  --button-success-color: var(--color-white);
+  --button-success-border: var(--color-success);
+  --button-success-fill: var(--color-success);
+  --button-size-normal: var(--size-normal);
+  --button-size-small: var(--size-small);
+  --button-size-large: var(--size-large);
 
 }
 
@@ -76,7 +91,21 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: 16px;
+
+  font-size: var(--icon-size-normal)
 }
+
+[class^="pile-icon-"].small, [class*=" pile-icon-"].small {
+    font-size: 12px;
+    font-size: var(--icon-size-small);
+  }
+
+[class^="pile-icon-"].large, [class*=" pile-icon-"].large {
+    font-size: 24px;
+    font-size: var(--icon-size-large);
+  }
 
 .pile-icon-arrow-left:before {
     content: '\e900';

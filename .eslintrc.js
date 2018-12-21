@@ -3,7 +3,8 @@ module.exports = {
     "parser": "babel-eslint",
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "import/no-extraneous-dependencies": 0
+      "import/no-extraneous-dependencies": 0,
+      "react/button-has-type": 0,
     },
     "globals": {
     },

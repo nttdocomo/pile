@@ -10,7 +10,23 @@ import trace from '../utils/trace';
 
 import './amblin.css';
 
+const renderer = new marked.Renderer();
+// Override function
+renderer.heading = function (text, level) {
+  const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+  return `
+          <h${level}>
+            <a name="${escapedText}" class="anchor" href="#${escapedText}">
+              <span class="pile-icon-information"></span>
+            </a>
+            ${text}
+          </h${level}>`;
+};
+
+
 marked.setOptions({
+  renderer,
   gfm: true,
   tables: true,
   breaks: true,
