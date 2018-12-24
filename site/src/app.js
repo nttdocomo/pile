@@ -11,8 +11,9 @@ const App = () => (
     <div className="main">
       <div className="nav">
         <ul>
-          <li><Link to="/Button">Button</Link></li>
-          <li><Link to="/Icon">icon</Link></li>
+          <li><Link to="/button">Button</Link></li>
+          <li><Link to="/icon">Icon</Link></li>
+          <li><Link to="/totast">Totast</Link></li>
         </ul>
       </div>
       <div className="content">
