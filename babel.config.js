@@ -18,12 +18,6 @@ module.exports = function (api) {
     plugins: [
       '@babel/plugin-syntax-dynamic-import',
       '@babel/plugin-transform-runtime',
-      // ['prismjs', {
-      //   languages: ['javascript', 'css', 'markup'],
-      //   plugins: ['line-numbers'],
-      //   theme: 'twilight',
-      //   css: true,
-      // }],
     ],
   };
 };
