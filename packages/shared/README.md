@@ -1,11 +1,11 @@
-# `@pile/button`
+# `shared`
 
 > TODO: description
 
 ## Usage
 
 ```
-const button = require('@pile/button');
+const shared = require('shared');
 
 // TODO: DEMONSTRATE API
 ```

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { commonSizes, sizes } from '@pile/shared';
 
 const Icon = ({
   type, size, className, ...props
@@ -18,9 +19,6 @@ const Icon = ({
 
 Icon.propTypes = {
   type: PropTypes.string.isRequired,
-  /* eslint-disable react/require-default-props */
-  size: PropTypes.oneOf(['small', 'large']),
-  /* eslint-enable react/require-default-props */
 };
 
-export default Icon;
+export default commonSizes([sizes.SMALL, sizes.LARGE], Icon);

@@ -3,6 +3,12 @@
 @ns pile {
   @c button {
     font-size: var(--button-size-normal);
+    @when small {
+      font-size: var(--button-size-small);
+    }
+    @when large {
+      font-size: var(--button-size-large);
+    }
     @m primary {
       color: var(--button-primary-color);
       border-color:  var(--button-primary-border);
@@ -12,12 +18,6 @@
       color: var(--button-success-color);
       border-color:  var(--button-success-border);
       background-color: var(--button-success-fill);
-    }
-    @when small {
-      font-size: var(--button-size-small);
-    }
-    @when large {
-      font-size: var(--button-size-large);
     }
   }
 }

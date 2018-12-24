@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { commonSizes, sizes } from '@pile/shared';
 
 const Button = ({
   children, className, size, type, nativeType, ...props
@@ -9,7 +10,7 @@ const Button = ({
     'pile-button': true,
     [`pile-button--${type}`]: true,
     [className]: className,
-    [`is-${size}`]: size !== 'normal',
+    [`is-${size}`]: size,
   });
 
   return (
@@ -24,13 +25,11 @@ Button.propTypes = {
   ]).isRequired,
   type: PropTypes.oneOf(['primary', 'success', 'info', 'warning', 'danger']),
   nativeType: PropTypes.oneOf(['button', 'submit', 'reset']),
-  size: PropTypes.oneOf(['small', 'normal', 'large']),
 };
 
 Button.defaultProps = {
   type: 'primary',
   nativeType: 'button',
-  size: 'normal',
 };
 
-export default Button;
+export default commonSizes([sizes.SMALL, sizes.LARGE], Button);
