@@ -20,6 +20,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  display: inline-block;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -58,7 +59,6 @@
 .pile-icon-check {
   &:before {
     content: var(--icon-check);
-    color: #343c5c;
   }
 }
 .pile-icon-coin-rmb {
@@ -102,11 +102,13 @@
   }
 }
 .pile-icon-loading-snaker {
+  animation: cirle-anim 1s linear infinite;
   &:before {
     content: var(--icon-loading-snaker);
   }
 }
 .pile-icon-loading {
+  animation: cirle-anim 1s linear infinite;
   &:before {
     content: var(--icon-loading);
   }
@@ -187,4 +189,13 @@
     color: #343c5c;
   }
 }
+
+@keyframes cirle-anim {
+    0 {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 

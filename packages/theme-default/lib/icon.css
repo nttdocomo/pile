@@ -1,4 +1,9 @@
 :root {
+  /* base */
+  --opacity: 0.65;
+  --border-radius: 4px;
+  --component-ns: pile;
+
   /* sizes */
   --size-small: 12px;
   --size-normal: 16px;
@@ -53,15 +58,36 @@
   --icon-size-large: var(--size-large);
 
   /* button */
+  --button-default-color: #656b79;
+  --button-default-border: #b8bbbf;
+  --button-default-fill: #f6f8fa;
   --button-primary-color: var(--color-white);
   --button-primary-border: var(--color-primary);
   --button-primary-fill: var(--color-primary);
   --button-success-color: var(--color-white);
   --button-success-border: var(--color-success);
   --button-success-fill: var(--color-success);
+  --button-info-color: var(--color-white);
+  --button-info-border: var(--color-info);
+  --button-info-fill: var(--color-info);
+  --button-warning-color: var(--color-white);
+  --button-warning-border: var(--color-warning);
+  --button-warning-fill: var(--color-warning);
+  --button-danger-color: var(--color-white);
+  --button-danger-border: var(--color-danger);
+  --button-danger-fill: var(--color-danger);
   --button-size-normal: var(--size-normal);
   --button-size-small: var(--size-small);
   --button-size-large: var(--size-large);
+  --button-disabled: var(--opacity);
+  --button-radius: var(--border-radius);
+  --button-line-height-default: 1.5;
+  --button-line-height-small: 1.5;
+  --button-line-height-large: 1.333;
+  --button-padding-default: 2px 6px;
+  --button-padding-small: 2px 6px;
+  --button-padding-large: 2px 10px;
+  --button-icon-spacing: 8px;
 
 }
 
@@ -87,6 +113,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  display: inline-block;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -130,7 +157,6 @@
 .pile-icon-check:before {
     content: '\e904';
     content: var(--icon-check);
-    color: #343c5c;
   }
 
 .pile-icon-coin-rmb:before {
@@ -173,10 +199,20 @@
     content: var(--icon-information);
   }
 
+.pile-icon-loading-snaker {
+  -webkit-animation: cirle-anim 1s linear infinite;
+          animation: cirle-anim 1s linear infinite
+}
+
 .pile-icon-loading-snaker:before {
     content: '\e90d';
     content: var(--icon-loading-snaker);
   }
+
+.pile-icon-loading {
+  -webkit-animation: cirle-anim 1s linear infinite;
+          animation: cirle-anim 1s linear infinite
+}
 
 .pile-icon-loading:before {
     content: '\e90e';
@@ -257,5 +293,27 @@
     content: '\e91d';
     content: var(--icon-warnning);
     color: #343c5c;
+  }
+
+@-webkit-keyframes cirle-anim {
+    0 {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+@keyframes cirle-anim {
+    0 {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
 

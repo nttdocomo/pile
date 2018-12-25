@@ -3,21 +3,123 @@
 @ns pile {
   @c button {
     font-size: var(--button-size-normal);
+    padding: var(--button-padding-default);
+    line-height: var(--button-line-height-default);
+    border-radius: var(--button-radius);
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    border: 0;
+    outline: 0;
+    white-space: nowrap;
+    word-break: break-word;
+    vertical-align: middle;
+
     @when small {
       font-size: var(--button-size-small);
+      padding: var(--button-padding-small);
+      line-height: var(--button-line-height-small);
     }
     @when large {
       font-size: var(--button-size-large);
+      padding: var(--button-padding-large);
+      line-height: var(--button-line-height-large);
+    }
+    @when block {
+      width: 100%;
+      display: block;
+    }
+    @when disabled {
+      opacity: var(--button-disabled);
+    }
+    @m default {
+      color: var(--button-default-color);
+      background-color: var(--button-default-fill);
+      box-shadow: 0 0 1px var(--button-default-border);
+      @when text {
+        background-color: transparent;
+        box-shadow: none;
+      }
     }
     @m primary {
       color: var(--button-primary-color);
-      border-color:  var(--button-primary-border);
       background-color: var(--button-primary-fill);
+      @when line {
+        color: var(--button-primary-fill);
+        background-color: var(--button-primary-color);
+        box-shadow: 0 0 1px var(--button-primary-fill);
+      }
+      @when text {
+        color: var(--button-primary-fill);
+        background-color: transparent;
+        box-shadow: none;
+      }
     }
     @m success {
       color: var(--button-success-color);
-      border-color:  var(--button-success-border);
       background-color: var(--button-success-fill);
+      @when line {
+        color: var(--button-success-fill);
+        background-color: var(--button-success-color);
+        box-shadow: 0 0 1px var(--button-success-fill);
+      }
+      @when text {
+        color: var(--button-success-fill);
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+    @m info {
+      color: var(--button-info-color);
+      background-color: var(--button-info-fill);
+      @when line {
+        color: var(--button-info-fill);
+        background-color: var(--button-info-color);
+        box-shadow: 0 0 1px var(--button-info-fill);
+      }
+      @when text {
+        color: var(--button-info-fill);
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+    @m warning {
+      color: var(--button-warning-color);
+      background-color: var(--button-warning-fill);
+      @when line {
+        color: var(--button-warning-fill);
+        background-color: var(--button-warning-color);
+        box-shadow: 0 0 1px var(--button-warning-fill);
+      }
+      @when text {
+        color: var(--button-warning-fill);
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+    @m danger {
+      color: var(--button-danger-color);
+      background-color: var(--button-danger-fill);
+      @when line {
+        color: var(--button-danger-fill);
+        background-color: var(--button-danger-color);
+        box-shadow: 0 0 1px var(--button-danger-fill);
+      }
+      @when text {
+        color: var(--button-danger-fill);
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+    @d icon {
+      margin-right: var(--button-icon-spacing);
+      vertical-align: middle;
+      display: inline-block;
+    }
+    @d label {
+      vertical-align: middle;
+      display: inline-block;
     }
   }
 }

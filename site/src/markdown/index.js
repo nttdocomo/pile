@@ -8,7 +8,7 @@ import marked from 'marked';
 import Canvas from './canvas';
 import trace from '../utils/trace';
 
-import './amblin.css';
+import './amblin-lite.css';
 
 const renderer = new marked.Renderer();
 // Override function
