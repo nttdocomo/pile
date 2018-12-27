@@ -1,11 +1,15 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { commonSizes, sizes } from '@pile/shared';
+import {
+  compose, prefixClsProperty, sizeProperty, sizes,
+} from '@pile/shared';
 
-const ButtonGroup = ({ className, children, ...props }) => {
+const ButtonGroup = ({
+  prefixCls, className, children, ...props
+}) => {
   const cls = classNames({
-    'pile-button-group': true,
+    [`${prefixCls}-btn-group`]: true,
     [className]: className,
   });
   return (
@@ -33,4 +37,9 @@ ButtonGroup.defaultProps = {
   vertical: false,
 };
 
-export default commonSizes([sizes.SMALL, sizes.LARGE], ButtonGroup);
+const enhance = compose(
+  sizeProperty([sizes.SMALL, sizes.LARGE]),
+  prefixClsProperty,
+);
+
+export default enhance(ButtonGroup);

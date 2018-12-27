@@ -1,13 +1,15 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { commonSizes, sizes } from '@pile/shared';
+import {
+  compose, prefixClsProperty, sizeProperty, sizes,
+} from '@pile/shared';
 
 const Icon = ({
-  type, size, className, ...props
+  prefixCls, type, size, className, ...props
 }) => {
   const cls = classNames({
-    [`pile-icon-${type}`]: true,
+    [`${prefixCls}-icon-${type}`]: true,
     [className]: className,
     [size]: size,
   });
@@ -21,4 +23,9 @@ Icon.propTypes = {
   type: PropTypes.string.isRequired,
 };
 
-export default commonSizes([sizes.SMALL, sizes.LARGE], Icon);
+const enhance = compose(
+  sizeProperty([sizes.SMALL, sizes.LARGE]),
+  prefixClsProperty,
+);
+
+export default enhance(Icon);

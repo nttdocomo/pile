@@ -5,12 +5,11 @@
     font-size: var(--button-size-normal);
     padding: var(--button-padding-default);
     line-height: var(--button-line-height-default);
-    border-radius: var(--button-radius);
     box-sizing: border-box;
     text-align: center;
     display: inline-block;
     position: relative;
-    border: 0;
+    border: 1px solid;
     outline: 0;
     white-space: nowrap;
     word-break: break-word;
@@ -33,13 +32,43 @@
     @when disabled {
       opacity: var(--button-disabled);
     }
+    @when radius {
+      border-radius: var(--button-radius);
+    }
+    @when circle {
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      line-height: 0;
+      padding: 0;
+      &.is-small {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        & .pile-button-icon {
+          font-size: 18px;
+        }
+      }
+      &.is-large {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+        & .pile-button-icon {
+          font-size: 32px;
+        }
+      }
+      & .pile-button-icon {
+        font-size: 22px;
+        margin-right: 0;
+      }
+    }
     @m default {
       color: var(--button-default-color);
       background-color: var(--button-default-fill);
-      box-shadow: 0 0 1px var(--button-default-border);
+      border-color: var(--button-default-border);
       @when text {
         background-color: transparent;
-        box-shadow: none;
+        border: 0;
       }
     }
     @m primary {
@@ -48,12 +77,12 @@
       @when line {
         color: var(--button-primary-fill);
         background-color: var(--button-primary-color);
-        box-shadow: 0 0 1px var(--button-primary-fill);
+        border-color: var(--button-primary-border);
       }
       @when text {
         color: var(--button-primary-fill);
         background-color: transparent;
-        box-shadow: none;
+        border: 0;
       }
     }
     @m success {
@@ -62,12 +91,12 @@
       @when line {
         color: var(--button-success-fill);
         background-color: var(--button-success-color);
-        box-shadow: 0 0 1px var(--button-success-fill);
+        border-color: var(--button-success-fill);
       }
       @when text {
         color: var(--button-success-fill);
         background-color: transparent;
-        box-shadow: none;
+        border: 0;
       }
     }
     @m info {
@@ -76,12 +105,12 @@
       @when line {
         color: var(--button-info-fill);
         background-color: var(--button-info-color);
-        box-shadow: 0 0 1px var(--button-info-fill);
+        border-color: var(--button-info-fill);
       }
       @when text {
         color: var(--button-info-fill);
         background-color: transparent;
-        box-shadow: none;
+        border: 0;
       }
     }
     @m warning {
@@ -90,12 +119,12 @@
       @when line {
         color: var(--button-warning-fill);
         background-color: var(--button-warning-color);
-        box-shadow: 0 0 1px var(--button-warning-fill);
+        border-color: var(--button-warning-fill);
       }
       @when text {
         color: var(--button-warning-fill);
         background-color: transparent;
-        box-shadow: none;
+        border: 0;
       }
     }
     @m danger {
@@ -103,23 +132,56 @@
       background-color: var(--button-danger-fill);
       @when line {
         color: var(--button-danger-fill);
-        background-color: var(--button-danger-color);
-        box-shadow: 0 0 1px var(--button-danger-fill);
+        background-color: var(--button-danger-fill);
       }
       @when text {
         color: var(--button-danger-fill);
         background-color: transparent;
-        box-shadow: none;
+        border: 0;
       }
     }
     @d icon {
       margin-right: var(--button-icon-spacing);
       vertical-align: middle;
       display: inline-block;
+
     }
     @d label {
       vertical-align: middle;
       display: inline-block;
+    }
+  }
+
+  @c btn-group {
+    & > .pile-button {
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      &.is-block:first-child {
+        border-top-right-radius: var(--button-radius);
+        border-bottom-left-radius: 0;
+      }
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+      }
+      &.is-block:last-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--button-radius);
+      }
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+      }
+      &:not(:last-child) {
+        margin-right: -1px;
+      }
+      &.is-block:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: -1px;
+      }
     }
   }
 }

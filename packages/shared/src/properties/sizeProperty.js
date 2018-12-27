@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
+import curry from '../utils/curry';
 
 /* eslint-disable no-param-reassign */
-const commonSizes = (sizes, defaultSize, Component) => {
+const sizeProperty = curry((sizes, defaultSize, Component) => {
   if (typeof defaultSize !== 'string') {
     Component = defaultSize;
     defaultSize = null;
@@ -18,6 +19,6 @@ const commonSizes = (sizes, defaultSize, Component) => {
 
   Component.defaultProps.size = defaultSize;
   return Component;
-};
+}, 1);
 
-export default commonSizes;
+export default sizeProperty;

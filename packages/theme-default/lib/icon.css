@@ -62,7 +62,7 @@
   --button-default-border: #b8bbbf;
   --button-default-fill: #f6f8fa;
   --button-primary-color: var(--color-white);
-  --button-primary-border: var(--color-primary);
+  --button-primary-border: rgb(41, 98, 146);
   --button-primary-fill: var(--color-primary);
   --button-success-color: var(--color-white);
   --button-success-border: var(--color-success);

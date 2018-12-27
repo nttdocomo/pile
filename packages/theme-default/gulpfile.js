@@ -3,6 +3,7 @@ const postcss = require('gulp-postcss');
 const atImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
 const cssnano = require('cssnano');
+const postcssColorMod = require('postcss-color-mod-function');
 const postBem = require('./scripts/postcss-bem2');
 const pkg = require('./package.json');
 
@@ -21,6 +22,7 @@ gulp.task('compile', () => gulp.src('./src/*.css')
       stage: 0,
       browsers: pkg.browserslist,
     }),
+    postcssColorMod(/* pluginOptions */),
     // cssnano({ preset: 'default' }),
   ]))
   .pipe(gulp.dest('./lib')));

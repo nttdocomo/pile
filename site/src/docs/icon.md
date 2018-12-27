@@ -65,3 +65,4 @@ render () {
 |-----------|----------|------------|-------------------|
 | type  |  string  |  -      | one of [arrow-left, arrow-right, ... , icon-warnning]  |
 | size  |  string  |  -      | small/large，small: 12px，large: 24px; |
+| prefixCls     | string     |  pile    | 组件的className前缀 |
