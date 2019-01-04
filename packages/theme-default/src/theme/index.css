@@ -88,5 +88,12 @@
   --button-padding-large: 2px 10px;
   --button-icon-spacing: 8px;
 
+  /* toast */
+  --fade-effect: {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+  }
+
 }
 

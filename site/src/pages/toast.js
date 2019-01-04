@@ -1,9 +1,9 @@
 import * as React from 'react';
-import docMd from '../docs/totast.md';
+import docMd from '../docs/toast.md';
 import Markdown from '../markdown';
 
-const Totast = () => (
+const Toast = () => (
   <div><Markdown input={docMd} /></div>
 );
 
-export default Totast;
+export default Toast;

@@ -1,8 +1,16 @@
-# mobile端totast组件
+# mobile端toast组件
 
 ## 基本用法
 
-
+```js
+render () {
+  return (
+    <div>
+      <Mask show={true}/>
+    </div>
+  )
+}
+```
 ## API
 
 ### props
