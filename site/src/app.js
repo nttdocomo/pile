@@ -13,7 +13,7 @@ const App = () => (
         <ul>
           <li><Link to="/button">Button</Link></li>
           <li><Link to="/icon">Icon</Link></li>
-          <li><Link to="/totast">Totast</Link></li>
+          <li><Link to="/toast">Toast</Link></li>
         </ul>
       </div>
       <div className="content">
