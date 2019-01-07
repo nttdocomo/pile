@@ -6,15 +6,23 @@ import {
 } from '@pile/shared';
 
 const ButtonGroup = ({
-  prefixCls, className, children, ...props
+  prefixCls, className, children, block, line, divide, borderColor, ...props
 }) => {
   const cls = classNames({
     [`${prefixCls}-btn-group`]: true,
+    'is-divide': divide,
     [className]: className,
   });
   return (
     <div className={cls} {...props}>
-      {children}
+      {React.Children.map(children, child => React.cloneElement(child, {
+        block,
+        line,
+        style: {
+          ...child.props.style,
+          borderColor,
+        },
+      }))}
     </div>
   );
 };
@@ -26,15 +34,19 @@ ButtonGroup.propTypes = {
   ]).isRequired,
   className: PropTypes.string,
   block: PropTypes.bool,
+  line: PropTypes.bool,
   divide: PropTypes.bool,
   vertical: PropTypes.bool,
+  borderColor: PropTypes.string,
 };
 
 ButtonGroup.defaultProps = {
   className: null,
-  block: false,
+  block: null,
+  line: null,
   divide: false,
   vertical: false,
+  borderColor: null,
 };
 
 const enhance = compose(

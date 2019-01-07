@@ -186,10 +186,25 @@ render () {
 render () {
   return (
     <div>
+      <Button.ButtonGroup line style={{marginBottom: '10px'}}>
+        <Button type='primary' >ok</Button>
+        <Button type='primary'>Primary</Button>
+        <Button type='primary'>Success</Button>
+      </Button.ButtonGroup>
+      <Button.ButtonGroup style={{marginBottom: '10px'}}>
+        <Button type='primary'>ok</Button>
+        <Button type='primary'>Primary</Button>
+        <Button type='primary'>Success</Button>
+      </Button.ButtonGroup>
       <Button.ButtonGroup block>
         <Button type='primary' line>Normal</Button>
         <Button type='primary' line>Primary</Button>
         <Button type='primary' line>Success</Button>
+      </Button.ButtonGroup>
+
+      <Button.ButtonGroup divide borderColor='#ccc' style={{marginTop: '10px', width: '300px'}}>
+        <Button>取消</Button>
+        <Button type='primary' line>确定</Button>
       </Button.ButtonGroup>
     </div>
   )

@@ -183,5 +183,14 @@
         margin-bottom: -1px;
       }
     }
+
+    &.is-divide {
+      display: flex;
+
+      & > .pile-button {
+        flex: 1;
+      }
+    }
+
   }
 }
