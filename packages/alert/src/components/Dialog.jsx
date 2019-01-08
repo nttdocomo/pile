@@ -121,12 +121,12 @@ export default class Dialog extends Component {
             {closer}
             {header}
             <div
-                className={`${prefixCls}-body`}
-                style={props.bodyStyle}
-                ref={el => this.bodyRef = el}
-              >
-                {props.children}
-              </div>
+              className={`${prefixCls}-body`}
+              style={props.bodyStyle}
+              ref={el => this.bodyRef = el}
+            >
+              {props.children}
+            </div>
             {footer}
           </div>
         </RenderBox>

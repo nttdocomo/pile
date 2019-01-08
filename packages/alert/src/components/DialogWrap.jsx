@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Dialog from './Dialog';
-import './style/mobile.less';
+// import './style/mobile.less';
 
 const CAN_USE_DOM = !!(
   typeof window !== 'undefined'
