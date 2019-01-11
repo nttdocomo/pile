@@ -1,5 +1,3 @@
-@import 'theme';
-
 @ns pile {
     @c mask {
         position: fixed;
@@ -18,15 +16,11 @@
         @when hidden{
             opacity: 0;
         }
-        @m animate{
-            @when show {
-                animation-name: maskFadeIn;
-                @apply --fade-effect;
-            }
-            @when hidden{
-                animation-name: maskFadeOut;
-                @apply --fade-effect;
-            }
+        @when animate-show {
+            animation: maskFadeIn 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+        }
+        @when animate-hidden{
+            animation: maskFadeOut 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) both;
         }
     }
     @keyframes maskFadeIn {

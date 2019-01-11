@@ -10,34 +10,37 @@ import {
 } from '@pile/shared';
 
 const Mask = ({
-  show, hasAnimate, prefixCls, className,
+  show, hasAnimate, prefixCls, className, clickClose,
 }) => {
   const cls = classNames({
     [`${prefixCls}-mask`]: true,
-    [`${prefixCls}-mask-is-show`]: show && !hasAnimate,
-    [`${prefixCls}-mask-is-hidden`]: !show && !hasAnimate,
-    [`${prefixCls}-mask--animate-is-show`]: show && hasAnimate,
-    [`${prefixCls}-mask--animate-is-hidden`]: !show && hasAnimate,
+    'is-show': show && !hasAnimate,
+    'is-hidden': !show && !hasAnimate,
+    'is-animate-show': show && hasAnimate,
+    'is-animate-hidden': !show && hasAnimate,
     [className]: className,
   });
-  return (<div className={cls} />);
+
+  const clickCloseFn = () => {
+    if (clickClose) {
+      clickClose();
+    }
+  };
+  return (<div className={cls} onClick={clickCloseFn} />);
 };
 
 Mask.propTypes = {
   show: PropTypes.bool,
   hasAnimate: PropTypes.bool,
   className: PropTypes.string,
+  clickClose: PropTypes.func,
 };
 
 Mask.defaultProps = {
-  show: false,
+  show: true,
   hasAnimate: false,
   className: '',
+  clickClose: null,
 };
 
-// type PropTypes = {
-//     show? : boolean,
-//     clickFn? : Function
-// }
-
-export default Mask;
+export default prefixClsProperty(Mask);

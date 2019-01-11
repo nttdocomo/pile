@@ -3,10 +3,16 @@
 ## 基本用法
 
 ```js
+componentWillMount () {
+  this.setState({content : "hi,jasmine"})
+ setTimeout(() => {
+        this.setState({content : "hei,potato",iconType : "success"})
+      }, 0.3 * 1000);
+}
 render () {
   return (
     <div>
-      <Mask show={true}/>
+      <Toast content={this.state.content} iconType={this.state.iconType}/>
     </div>
   )
 }

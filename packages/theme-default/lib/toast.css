@@ -12,7 +12,7 @@
   --color-white: #fff;
   --color-black: #333;
   --color-dashed: #d9d9d9;
-  --color-transparent: #0000;
+  --color-transparent: rgba(0,0,0,0);
 
   --color-primary: #337ab7;
   --color-success: #218838;
@@ -61,7 +61,7 @@
   --button-default-border: #b8bbbf;
   --button-default-fill: #f6f8fa;
   --button-primary-color: var(--color-white);
-  --button-primary-border: color-mod(var(--color-primary) shade(20%));
+  --button-primary-border: rgb(41, 98, 146);
   --button-primary-fill: var(--color-primary);
   --button-success-color: var(--color-white);
   --button-success-border: var(--color-success);
@@ -93,4 +93,26 @@
   --icon-size-big: 32px;
   --font-size-base: 14px;
 }
-
+.pile-toast {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.8);
+        top:50%;
+        left:50%;
+        position: fixed;
+        -webkit-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+        z-index: 1000;
+        border-radius: 2px;
+        border-radius: var(--radius-xs);
+        text-align: center;
+        padding: 20px 8px 20px 8px;
+}
+.pile-toast-content {
+            color: #fff;
+            color: var(--color-white);
+            font-size: 14px;
+            font-size: var(--font-size-base);
+            line-height: 20px;
+            display: inline-block;
+}
