@@ -1,24 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// 普通版模式
-const IS_REACT_16 = !!ReactDOM.createPortal;
+
 class NewPortal extends React.Component {
   constructor(props) {
     super(props);
-    this.node = document.createElement('div');
-    document.body.appendChild(this.node);
+  }
+
+  componentWillUnmount() {
+    if (this.container) {
+      this.container.parentNode.removeChild(this.container);
+      this.container = null;
+    }
+  }
+
+  getContainer = () => {
+    if (!this.container) {
+      const container = document.createElement('div');
+      const containerId = `pile-container-${(new Date().getTime())}`;
+      container.setAttribute('id', containerId);
+      document.body.appendChild(container);
+      this.container = container;
+    }
+    return this.container;
   }
 
   render() {
-    const { children } = this.props;
-    if (!IS_REACT_16) {
-      return ReactDOM.unstable_renderSubtreeIntoContainer(
-        this,
-        children,
-        this.node,
-      );
+    const { children, visible } = this.props;
+    if (visible) {
+      return ReactDOM.createPortal(children, this.getContainer());
     }
-    return ReactDOM.createPortal(children, this.node);
+    return null;
   }
 }
 

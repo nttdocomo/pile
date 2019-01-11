@@ -52,7 +52,6 @@ export default class Modal extends Component {
       style,
       footer = [],
       popup,
-      animationType,
       ...restProps
     } = this.props;
     const btnGroupClass = classnames(
@@ -85,7 +84,6 @@ export default class Modal extends Component {
 
 Modal.defaultProps = {
   prefixCls: 'pile-modal',
-  animationType: 'slide-down',
   style: {},
   onShow() {},
   footer: [],
@@ -93,7 +91,6 @@ Modal.defaultProps = {
 };
 Modal.propTypes = {
   prefixCls: PropTypes.string,
-  transparent: PropTypes.bool,
   className: PropTypes.string,
   wrapClassName: PropTypes.string,
   onShow: PropTypes.func,
