@@ -480,6 +480,10 @@ template {
   --button-padding-large: 2px 10px;
   --button-icon-spacing: 8px;
 
+  /* toast */
+  --radius-xs: 2px;
+  --icon-size-big: 32px;
+  --font-size-base: 14px;
 }
 
 @font-face {
@@ -981,3 +985,95 @@ template {
             -ms-flex: 1;
                 flex: 1;
       }
+
+.pile-mask {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #373737;
+        background-color: rgba(55, 55, 55, 0.6);
+        height: 100%;
+        filter: alpha(opacity=50);
+        z-index: 1050;
+}
+
+.pile-mask.is-animate-hidden {
+            -webkit-animation: maskFadeOut 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+                    animation: maskFadeOut 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+}
+
+.pile-mask.is-animate-show {
+            -webkit-animation: maskFadeIn 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+                    animation: maskFadeIn 0.3s cubic-bezier(0.55, 0, 0.55, 0.2) both;
+}
+
+.pile-mask.is-hidden {
+            opacity: 0;
+}
+
+.pile-mask.is-show {
+            opacity: 1;
+}
+
+@-webkit-keyframes maskFadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+
+@keyframes maskFadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+    }
+
+@-webkit-keyframes maskFadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+    }
+
+@keyframes maskFadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+    }
+
+.pile-toast {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.8);
+        top:50%;
+        left:50%;
+        position: fixed;
+        -webkit-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%);
+        z-index: 1000;
+        border-radius: 2px;
+        border-radius: var(--radius-xs);
+        text-align: center;
+        padding: 20px 8px 20px 8px;
+}
+
+.pile-toast-content {
+            color: #fff;
+            color: var(--color-white);
+            font-size: 14px;
+            font-size: var(--font-size-base);
+            line-height: 20px;
+            display: inline-block;
+}
