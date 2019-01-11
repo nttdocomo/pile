@@ -7,13 +7,38 @@ import './app.css';
 
 const App = () => (
   <div className="app">
-    <div className="header"><h1>pile docs</h1></div>
+    <div className="header clearfix">
+      <h1 className="trademark fl">pile docs</h1>
+      <nav className="nav fr">
+        <ul className="clearfix">
+          <li><a>首页</a></li>
+          <li><a>设计</a></li>
+          <li><a>组件</a></li>
+          <li><a>github</a></li>
+        </ul>
+      </nav>
+    </div>
     <div className="main">
-      <div className="nav">
-        <ul>
-          <li><Link to="/button">Button</Link></li>
-          <li><Link to="/icon">Icon</Link></li>
-          <li><Link to="/toast">Toast</Link></li>
+      <div className="sidebar">
+        <h2 className="links actived"><a href="/theme">主题</a></h2>
+        <h2 className="links"><a href="/language">多语言</a></h2>
+        <h2 className="un-links">
+components
+          {' '}
+          <span>
+            <i />
+            <b />
+          </span>
+        </h2>
+        <ul className="arc-list">
+          <li className="links"><Link to="/button">Button</Link></li>
+          <li className="links"><Link to="/icon">Icon</Link></li>
+          <li className="sec-nav">
+            <dl>
+              <dt>交互</dt>
+              <dd className="links"><Link to="/totast">Toast</Link></dd>
+            </dl>
+          </li>
         </ul>
       </div>
       <div className="content">

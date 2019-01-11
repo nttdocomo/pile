@@ -353,3 +353,17 @@
         margin-right: 0;
         margin-bottom: -1px;
       }
+
+.pile-btn-group.is-divide {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex
+    }
+
+.pile-btn-group.is-divide > .pile-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+      }
