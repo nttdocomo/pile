@@ -1,7 +1,11 @@
 import Button from './button';
 import Icon from './icon';
-import Toast from './toast';
+import Totast from './totast';
+import Alert from './alert';
 
 export default {
-  Button, Icon, Toast,
+  Button,
+  Icon,
+  Totast,
+  Alert,
 };
