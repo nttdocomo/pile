@@ -1,0 +1,157 @@
+:root {
+  /* base */
+  --opacity: 0.65;
+  --border-radius: 4px;
+
+  /* sizes */
+  --size-small: 12px;
+  --size-normal: 16px;
+  --size-large: 24px;
+
+  /* colors */
+  --color-white: #fff;
+  --color-black: #333;
+  --color-dashed: #d9d9d9;
+  --color-transparent: rgba(0,0,0,0);
+
+  --color-primary: #337ab7;
+  --color-success: #218838;
+  --color-info: #31b0d5;
+  --color-warning: #ec971f;
+  --color-danger: #c9302c;
+
+  /* icons*/
+  --icon-arrow-left: '\e900';
+  --icon-arrow-right: '\e901';
+  --icon-check-circle: '\e902';
+  --icon-check-solid-circle: '\e903';
+  --icon-check: '\e904';
+  --icon-coin-rmb: '\e905';
+  --icon-delete: '\e906';
+  --icon-download: '\e907';
+  --icon-editor: '\e908';
+  --icon-error-circle: '\e909';
+  --icon-error-solid-circle: '\e90a';
+  --icon-error: '\e90b';
+  --icon-information: '\e90c';
+  --icon-loading-snaker: '\e90d';
+  --icon-loading: '\e90e';
+  --icon-location: '\e90f';
+  --icon-lock: '\e910';
+  --icon-message: '\e911';
+  --icon-minus-square: '\e912';
+  --icon-minus: '\e913';
+  --icon-phone: '\e914';
+  --icon-plus-square: '\e915';
+  --icon-plus: '\e916';
+  --icon-print: '\e917';
+  --icon-search: '\e918';
+  --icon-star: '\e919';
+  --icon-time: '\e91a';
+  --icon-user: '\e91b';
+  --icon-warnning-solid-circle: '\e91c';
+  --icon-warnning: '\e91d';
+
+  --icon-size-normal: var(--size-normal);
+  --icon-size-small: var(--size-small);
+  --icon-size-large: var(--size-large);
+
+  /* button */
+  --button-default-color: #656b79;
+  --button-default-border: #b8bbbf;
+  --button-default-fill: #f6f8fa;
+  --button-primary-color: var(--color-white);
+  --button-primary-border: rgb(41, 98, 146);
+  --button-primary-fill: var(--color-primary);
+  --button-success-color: var(--color-white);
+  --button-success-border: var(--color-success);
+  --button-success-fill: var(--color-success);
+  --button-info-color: var(--color-white);
+  --button-info-border: var(--color-info);
+  --button-info-fill: var(--color-info);
+  --button-warning-color: var(--color-white);
+  --button-warning-border: var(--color-warning);
+  --button-warning-fill: var(--color-warning);
+  --button-danger-color: var(--color-white);
+  --button-danger-border: var(--color-danger);
+  --button-danger-fill: var(--color-danger);
+  --button-size-normal: var(--size-normal);
+  --button-size-small: var(--size-small);
+  --button-size-large: var(--size-large);
+  --button-disabled: var(--opacity);
+  --button-radius: var(--border-radius);
+  --button-line-height-default: 1.5;
+  --button-line-height-small: 1.5;
+  --button-line-height-large: 1.333;
+  --button-padding-default: 2px 6px;
+  --button-padding-small: 2px 6px;
+  --button-padding-large: 2px 10px;
+  --button-icon-spacing: 8px;
+
+  /* toast */
+  --radius-xs: 2px;
+  --icon-size-big: 32px;
+  --font-size-base: 14px;
+}
+
+.pile-switch {}
+
+.pile-switch--wrap {
+      position: relative;
+
+      /* &.bgColor {
+        background-color: #ccc;
+      }
+
+      &.wrap-shape {
+        width: 50px;
+        height: 30px;
+        border-radius: 30px;
+      } */
+}
+
+.pile-switch--wrap.isDisabled {
+        opacity: 0.4;
+      }
+
+.pile-switch--wrap > input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+
+        /* &.input-shape:before {
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+        } */
+
+        /* &:before {
+          background-color: white;
+          width: attr(data-width px);
+          height: attr(data-width px);
+          border-radius: attr(data-width px);
+          content: '';
+          position: absolute;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          transition: all .3s;
+        } */
+      }
+
+.pile-switch--wrap > div {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: white;
+        border-radius: 30px;
+        top: 1px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+      }
