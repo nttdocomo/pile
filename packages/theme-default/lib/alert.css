@@ -88,6 +88,10 @@
   --button-padding-large: 2px 10px;
   --button-icon-spacing: 8px;
 
+  /* toast */
+  --radius-xs: 2px;
+  --icon-size-big: 32px;
+  --font-size-base: 14px;
 }
 
 
@@ -1160,7 +1164,6 @@
   .pile-modal-button-group-operation
   .pile-modal-button {
   text-align: left;
-
 }
 
 
@@ -1170,7 +1173,6 @@
   .pile-modal-button-group-operation
   .pile-modal-button {
   text-align: right;
-
 }
 
 
