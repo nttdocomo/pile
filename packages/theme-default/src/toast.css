@@ -1,0 +1,22 @@
+@import 'theme';
+@ns pile {
+    @c toast{
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.8);
+        top:50%;
+        left:50%;
+        position: fixed;
+        -webkit-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%);
+        z-index: 1000;
+        border-radius: var(--radius-xs);
+        text-align: center;
+        padding: 20px 8px 20px 8px;
+        @d content{
+            color: var(--color-white);
+            font-size: var(--font-size-base);
+            line-height: 20px;
+            display: inline-block;
+        }
+    }
+}

@@ -13,6 +13,8 @@ export default () => (
       <Route path="/button" component={pages.Button} />
       <Route path="/icon" component={pages.Icon} />
       <Route path="/totast" component={pages.Totast} />
+      <Route path="/alert" component={pages.Alert} />
+      <Route path="/switch" component={pages.Switch} />
       <Route path="/" exact render={() => <Redirect to="/button" />} />
     </Switch>
   </div>

@@ -22,14 +22,22 @@ const App = () => (
       <div className="sidebar">
         <h2 className="links actived"><a href="/theme">主题</a></h2>
         <h2 className="links"><a href="/language">多语言</a></h2>
-        <h2 className="un-links">components <span><i /><b /></span></h2>
+        <h2 className="un-links">
+components
+          {' '}
+          <span>
+            <i />
+            <b />
+          </span>
+        </h2>
         <ul className="arc-list">
           <li className="links"><Link to="/button">Button</Link></li>
           <li className="links"><Link to="/icon">Icon</Link></li>
+          <li className="links"><Link to="/switch">Switch</Link></li>
           <li className="sec-nav">
             <dl>
               <dt>交互</dt>
-              <dd className="links"><Link to="/totast">Totast</Link></dd>
+              <dd className="links"><Link to="/totast">Toast</Link></dd>
             </dl>
           </li>
         </ul>

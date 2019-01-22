@@ -18,7 +18,7 @@ import 'codemirror/addon/fold/foldgutter.css';
 export default class Editor extends Component {
   constructor() {
     super();
-    this.state = { show: false };
+    this.state = { show: true };
   }
 
   componentDidMount() {
@@ -31,7 +31,11 @@ export default class Editor extends Component {
       // viewportMargin: Infinity,
       lineNumbers: false,
       dragDrop: false,
-      extraKeys: { 'Ctrl-Q': function (cm) { cm.foldCode(cm.getCursor()); } },
+      extraKeys: {
+        'Ctrl-Q': function (cm) {
+          cm.foldCode(cm.getCursor());
+        },
+      },
       foldGutter: true,
       gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
     });
@@ -59,7 +63,7 @@ export default class Editor extends Component {
 
     const style = {
       visibility: show ? 'visible' : 'hidden',
-      height: show ? 'auto' : 0
+      height: show ? 'auto' : 0,
     };
 
     return (

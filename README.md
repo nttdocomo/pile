@@ -15,7 +15,7 @@ const icon = require('@pile/ui');
 ```
 sudo npm i -g lerna
 
-leran bootstrap
+lerna bootstrap
 ```
 
 ## start doc
