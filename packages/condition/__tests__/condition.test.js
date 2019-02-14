@@ -1,7 +1,13 @@
-'use strict';
+/**
+ * @author renmaomin@126.com
+ */
+import React from 'react';
+import { shallow } from 'enzyme';
+import { IfComponent } from '../src';
 
-const condition = require('..');
-
-describe('@pile/condition', () => {
-    it('needs tests');
+describe('Condition suite', () => {
+  it('render a Condition', () => {
+    const wrapper = shallow(<IfComponent when>{() => <p>hello IfComponent</p>}</IfComponent>);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

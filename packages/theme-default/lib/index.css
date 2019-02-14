@@ -972,6 +972,20 @@ template {
         margin-bottom: -1px;
       }
 
+.pile-btn-group.is-divide {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex
+    }
+
+.pile-btn-group.is-divide > .pile-button {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+      }
+
 .pile-fade-enter,
 .pile-fade-appear {
   opacity: 0;
@@ -1986,19 +2000,6 @@ template {
   zoom: 1;
   overflow: hidden;
 }
-.pile-btn-group.is-divide {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex
-    }
-
-.pile-btn-group.is-divide > .pile-button {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-            -ms-flex: 1;
-                flex: 1;
-      }
 
 .pile-mask {
         position: fixed;
@@ -2084,6 +2085,82 @@ template {
 }
 
 .pile-toast-content {
+            color: #fff;
+            color: var(--color-white);
+            font-size: 14px;
+            font-size: var(--font-size-base);
+            line-height: 20px;
+            display: inline-block;
+}
+
+.pile-switch {}
+
+.pile-switch--wrap {
+      position: relative;
+
+      /* &.bgColor {
+        background-color: #ccc;
+      }
+
+      &.wrap-shape {
+        width: 50px;
+        height: 30px;
+        border-radius: 30px;
+      } */
+}
+
+.pile-switch--wrap.isDisabled {
+        opacity: 0.4;
+      }
+
+.pile-switch--wrap > input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+
+        /* &.input-shape:before {
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+        } */
+
+        /* &:before {
+          background-color: white;
+          width: attr(data-width px);
+          height: attr(data-width px);
+          border-radius: attr(data-width px);
+          content: '';
+          position: absolute;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          transition: all .3s;
+        } */
+      }
+
+.pile-switch--wrap > div {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: white;
+        border-radius: 30px;
+        top: 1px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+      }
+
+.pile-radio {
+        color: blue;
+        font-size: 23px;
+}
+
+.pile-radio-content {
             color: #fff;
             color: var(--color-white);
             font-size: 14px;
