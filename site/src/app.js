@@ -35,6 +35,7 @@ components
           <li className="links"><Link to="/icon">Icon</Link></li>
           <li className="links"><Link to="/switch">Switch</Link></li>
           <li className="links"><Link to="/radio">Radio</Link></li>
+          <li className="links"><Link to="/list">List</Link></li>
           <li className="sec-nav">
             <dl>
               <dt>交互</dt>
